@@ -7850,7 +7850,7 @@ https://neurostars.org/t/how-dcm2niix-handles-different-imaging-types/22697/6
 		else
 			std::sort(dcmDim.begin(), dcmDim.begin() + numberOfFrames, compareTDCMdimRev);
 #else
-		if (stackPositionItem < maxVariableItem)
+		if (stackPositionItem > maxVariableItem)
 			qsort(dcmDim, numberOfFrames, sizeof(struct TDCMdim), compareTDCMdim);
 		else
 			qsort(dcmDim, numberOfFrames, sizeof(struct TDCMdim), compareTDCMdimRev);
